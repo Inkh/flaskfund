@@ -7,34 +7,13 @@
         <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script> -->
     </head>
     <body>
-        <h1>Index Page</h1>
-        <p>yosdf</p>
+        <h1>Counter</h1>
         <p>{{ session['counter'] }}</p>
-        <p>{{ counter }}</p>
-        <div class="wrapper">
-            <form action="/users" method="post">
-                Name: <input type="text" name="name">
-                Email: <input type="text" name="email">
-
-                <!-- <label>Dojo Location:</label>
-                    <select class = "location">
-                        <option name = "python">San Jose</option>
-                        <option name = "js">Seattle</option>
-                        <option name = "ruby">Mars</option>
-                        <option name = "eng">The moon!</option>
-                    </select>
-
-                <label>Favorite Language:</label>
-                    <select class = "lang">
-                        <option name = "python">Python</option>
-                        <option name = "js">JavaScript</option>
-                        <option name = "ruby">Ruby</option>
-                        <option name = "eng">ENGLISH</option>
-                    </select> -->
-
-                <p>Comment (optional):</p>
-                <input type="submit" value="Submit">
+            <form action="/plusTwo" method="post">
+                <input type="submit" value="+2">
             </form>
-        </div>
+            <form action="/reset" method="post">
+                <input type="submit" value="Reset">
+            </form>
     </body>
 </html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel='stylesheet' type='text/css' href='{{ url_for('static', filename="css/style.css") }}'>
+    </head>
+    <body>
+        <h1>Welcome to the Great Number Game!</h1>
+        <p>I am thinking of a number between 1 and 100</p>
+        <p>Take a guess!</p>
+        <p>{{ result }}</p>
+            <form action="/guesser" method="post">
+                <!-- <input type="hidden" name="{{ session['num'] }}" value="checker"> -->
+                <textarea name="guess" rows="1" cols="5"></textarea>
+                <input type="submit" name="submit">
+            </form>
+    </body>
+</html>

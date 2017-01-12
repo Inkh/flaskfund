@@ -4,26 +4,21 @@ app.secret_key = 'ThisIsSecret'
 
 @app.route('/')
 def index():
-    if session['counter'] != 0:
+    if session.has_key('counter'):
         session['counter'] += 1
-
     else:
-        session['counter'] = 0
+        session['counter'] = 1
 
     return render_template("index.html")
-    print "am i working"
-    # session['counter'] += 1
 
-@app.route('/users', methods=['POST'])
+@app.route('/reset', methods = ['POST'])
+def reset():
+    session['counter'] = 0
+    return redirect('/')
 
-def create_user():
-    print "Got Post Info"
+@app.route('/plusTwo', methods = ['POST'])
+def plusTwo():
+    session['counter'] += 1
+    return redirect('/')
 
-    session['name'] = request.form['name']
-    session['email'] = request.form['email']
-    return redirect('/show')
-
-@app.route('/show')
-def show_user():
-    return render_template('user.html', name=session['name'], email=session['email'])
 app.run(debug=True)
