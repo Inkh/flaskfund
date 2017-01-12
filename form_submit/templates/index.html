@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel='stylesheet' type='text/css' href='{{ url_for('static', filename="css/style.css") }}'>
+        <!-- <link rel="stylesheet" type="text/css" href='static/style.css'> -->
+        <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script> -->
+    </head>
+    <body>
+        <h1>Index Page</h1>
+
+        <div class="wrapper">
+            <form action="/direct" method="post">
+                Name: <input type="text" name="name">
+                Email: <input type="text" name="email">
+
+                <label>Dojo Location:</label>
+                    <select class = "location" name = "loc">
+                        <option value = "San Jose">San Jose</option>
+                        <option value = "Seattle">Seattle</option>
+                        <option value = "Mars">Mars</option>
+                        <option value = "The moon!">The moon!</option>
+                    </select>
+                <label>Favorite Language:</label>
+                    <select class = "lang" name = "language">
+                        <option value = "Python">Python</option>
+                        <option value = "JavaScript">JavaScript</option>
+                        <option value = "Ruby">Ruby</option>
+                        <option value = "ENGLISH">ENGLISH</option>
+                    </select>
+
+                Comment (optional): <textarea name="comments" rows="8" cols="60"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+*{
+    font-family: sans-serif;
+    color:green;
+    display: block;
+}
+
+.lang{
+    width:150px;
+    height: 30px;
+}
+.location{
+    width:150px;
+    height: 30px;
+}
+div.wrapper{
+    width:350px;
+    height:auto;
+    /*border: 2px solid black;*/
+}
+p{
+    display:inline-block;
+}

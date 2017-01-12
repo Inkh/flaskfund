@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <!-- <link rel="stylesheet" type="text/css" href='{{ url_for('static', filename='css/master.css') }}'> -->
+        <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script> -->
+    </head>
+    <body>
+        <h1>Index Page</h1>
+        <p>yosdf</p>
+        <p>{{ session['counter'] }}</p>
+        <p>{{ counter }}</p>
+        <div class="wrapper">
+            <form action="/users" method="post">
+                Name: <input type="text" name="name">
+                Email: <input type="text" name="email">
+
+                <!-- <label>Dojo Location:</label>
+                    <select class = "location">
+                        <option name = "python">San Jose</option>
+                        <option name = "js">Seattle</option>
+                        <option name = "ruby">Mars</option>
+                        <option name = "eng">The moon!</option>
+                    </select>
+
+                <label>Favorite Language:</label>
+                    <select class = "lang">
+                        <option name = "python">Python</option>
+                        <option name = "js">JavaScript</option>
+                        <option name = "ruby">Ruby</option>
+                        <option name = "eng">ENGLISH</option>
+                    </select> -->
+
+                <p>Comment (optional):</p>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
